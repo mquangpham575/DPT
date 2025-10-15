@@ -1,1 +1,1 @@
-# Đồ án Hệ Tính Toán Phân Bố
+# Đồ án CNTT Đa Phương Tiện
