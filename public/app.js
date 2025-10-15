@@ -25,7 +25,7 @@ let auth = null;
 const getCurrentPage = () => {
   // Gets the filename (e.g., 'login.html' or 'lobby.html')
   return (
-    window.location.pathname.split("/").pop().toLowerCase() || "login.html"
+    window.location.pathname.split("/").pop().toLowerCase() || "index.html"
   );
 };
 
@@ -165,7 +165,7 @@ const setupAuthStateListener = () => {
   onAuthStateChanged(auth, (user) => {
     if (user && user.email) {
       // USER IS LOGGED IN (with email/pass)
-      if (currentPage === "login.html") {
+      if (currentPage === "index.html") {
         // Redirect to Lobby
         console.log("Logged in. Redirecting to lobby.html");
         window.location.href = "lobby.html";
@@ -178,8 +178,8 @@ const setupAuthStateListener = () => {
       if (currentPage === "lobby.html") {
         // Redirect to Login
         console.log("Logged out. Redirecting to login.html");
-        window.location.href = "login.html";
-      } else if (currentPage === "login.html") {
+        window.location.href = "index.html";
+      } else if (currentPage === "index.html") {
         // Stay on Login and show auth forms
         showAuthView();
       }
