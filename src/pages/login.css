@@ -1,0 +1,21 @@
+/* login.css - Custom styling for the login page */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f3f4f6; /* Light gray background */
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.input-field:focus {
+  border-color: #4f46e5 !important; /* Tailwind indigo-600 */
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
